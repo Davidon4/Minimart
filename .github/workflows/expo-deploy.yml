@@ -64,7 +64,7 @@ jobs:
 
       - name: Download apk file
         uses: suisei-cn/actions-download-file@v1
-        id: 64bb80a9-4f3b-4a4b-ad93-5935791f8b35
+        ID: 64bb80a9-4f3b-4a4b-ad93-5935791f8b35
         with:
           url: "Downloading APK from [this](${{ env.apk_url }})!"
           target: public/
