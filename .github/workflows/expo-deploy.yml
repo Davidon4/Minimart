@@ -72,10 +72,10 @@ jobs:
       - name: LIST DIR
         run: ls -R
 
-      - uses: thedoctor0/zip-release@master
+      - uses: thedoctor0/zip-release@main
         with:
           path: public/
-          filename: demo-app.zip
+          filename: release.zip
 
       - name: Create Release
         id: create-new-release
@@ -92,8 +92,8 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-          asset_path: ./demo-app.zip
-          asset_name: demo-app-v${{ github.run_number }}.zip
+          asset_path: ./release.zip
+          asset_name: release-v${{ github.run_number }}.zip
           asset_content_type: application/zip
 
   delete-release:
@@ -102,8 +102,7 @@ jobs:
     steps:
       - uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
-          repo: dork7/react_native_app
+          repo: juggernaut.dev/Minimart
           keep_latest: 2
-          # delete_tag_pattern: beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
