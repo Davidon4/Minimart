@@ -46,7 +46,7 @@ All folders are placed under the minimart app folder which is the parent folder.
 
 ## Features to be added
 
-Likely going to add a theme, textinput to add new value/item
+Likely going to add a theme, The values are hardcoded from the codebase will implement textinput to add new values
 
 ---
 

@@ -22,9 +22,9 @@ const initState = [
   { id: uuid(), name: "Cornflakes" },
   { id: uuid(), name: "Milo" },
   { id: uuid(), name: "Milk" },
-  { id: uuid(), name: "Detergent" },
-  { id: uuid(), name: "Perfume" },
-  { id: uuid(), name: "Dettol" },
+  { id: uuid(), name: "Sugar" },
+  { id: uuid(), name: "Rice" },
+  { id: uuid(), name: "Spaghetti" },
 ];
 
 const ShoppingList = () => {
