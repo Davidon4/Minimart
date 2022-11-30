@@ -56,7 +56,7 @@ jobs:
           to: juggernaut.dev1@gmail.com, quayson450@gmail.com
           from: Juggernaut
           secure: true
-          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} APK URL -> ${{ apk_url }}
+          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} APK URL -> ${{ .env.apk_url }}
           ignore_cert: true
           convert_markdown: true
           attachments: attachments.zip,git.diff,./dist/static/*.js
@@ -66,7 +66,7 @@ jobs:
         uses: suisei-cn/actions-download-file@v1
         id: downloadfile # Remember to give an ID if you need the output
         with:
-          url: "Downloading APK from [this](${{ apk_url }})!"
+          url: "Downloading APK from [this](${{ .env.apk_url }})!"
           target: public/
           auto-match: true
       - name: LIST DIR
