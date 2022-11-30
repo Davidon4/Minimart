@@ -63,7 +63,7 @@ $ yarn start
 
 ## License:
 
-Licensed under the [MIT](https://github.com/Davidon4/Minimart/blob/main/LICENSE).
+Licensed under the [MIT](https://github.com/Davidon4/Minimart/blob/development/LICENSE).
 
 ---
 
