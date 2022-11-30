@@ -50,11 +50,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-          to: juggernaut.dev1@gmail.com
-          from: Developer
+          to: juggernaut.dev1@gmail.com, quayson450@gmail.com
+          from: Juggernaut
           secure: true
           body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} APK URL -> ${{ env.apk_url }}
           ignore_cert: true
