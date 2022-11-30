@@ -25,6 +25,7 @@ const initState = [
   { id: uuid(), name: "Nescafe" },
   { id: uuid(), name: "Rice" },
   { id: uuid(), name: "Spaghetti" },
+  { id: uuid(), name: "Coke" },
 ];
 
 const ShoppingList = () => {
