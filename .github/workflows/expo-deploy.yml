@@ -66,7 +66,7 @@ jobs:
         uses: suisei-cn/actions-download-file@v1
         id: downloadfile # Remember to give an ID if you need the output
         with:
-          url: "Downloading APK from [this](${{ env.apk_url }})!"
+          url: ${{ github.event.comment.body }}
           target: public/
           auto-match: true
       - name: LIST DIR
