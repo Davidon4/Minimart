@@ -50,6 +50,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           to: juggernaut.dev1@gmail.com, quayson450@gmail.com
           from: Juggernaut
