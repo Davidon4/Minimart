@@ -39,10 +39,10 @@ jobs:
         run: eas build --profile preview --platform android --non-interactive --clear-cache
 
       - name: GET APK URL from EXPO
-        run: eas build:list --json --limit=1 --platform=android |  jq -r .[0].artifacts.buildUrl
+        run: eas build:list --json --non-interactive --limit=1 --platform=android |  jq -r .[0].artifacts.buildUrl
 
       - name: Store apk download URL in env variable
-        run: echo "env.apk_url=$(eas build:list --json --limit=1 --platform=android |  jq -r .[0].artifacts.buildUrl)" >> $GITHUB_ENV
+        run: echo "apk_url=$(eas build:list --json --non-interactive --limit=1 --platform=android |  jq -r .[0].artifacts.buildUrl)" >> $GITHUB_ENV
 
       - name: Send mail
         if: always()
