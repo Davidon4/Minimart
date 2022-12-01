@@ -38,7 +38,7 @@ jobs:
         uses: mshick/add-pr-comment@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXPO_PROJECT: "@dork7/react-native-app" # Put in your own Expo project name here
+          EXPO_PROJECT: "@Davidon4/Minimart" # Put in your own Expo project name here
         with:
           message: |
             ## Application
